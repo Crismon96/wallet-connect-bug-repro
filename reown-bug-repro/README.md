@@ -10,41 +10,21 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    npm install
    ```
 
-2. Start the app
+2. Start the app in a custom development build (necessary to use Wallet locally)
 
    ```bash
-   npx expo start
+   npx expo run:ios --device "Your iPhone"
    ```
 
-In the output, you'll find options to open the app in a
+https://github.com/reown-com/appkit-react-native/issues/494
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Can be reproduced by connecting/disconnecting the app multiple times. The default chain is set to "SEI" and this works well most of the times. Sometimes though the Appkit modeal "Change Network" is shown which leads to this bug.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+If this happened signing a TX will put you to a loop between Metamask and this demo app like shown in the attached video.
 
-## Get a fresh project
+https://github.com/reown-com/appkit-react-native/issues/493
 
-When you're ready, run:
+This bug can be reproduced on connecting/disconnecting your wallet.
 
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+My Metamask version is: v7.57.0(2783)
+Let me know your address and I will send you some Gas to sign the demo TX.
